@@ -45,7 +45,7 @@ projeto-checkout-cypress/
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/lucasosses/projeto-checkout-cypress
+git clone https://github.com/lucasosses/projeto-checkout-cypress.git
 cd projeto-checkout-cypress
 
 ---
