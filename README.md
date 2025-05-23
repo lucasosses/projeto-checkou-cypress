@@ -15,18 +15,17 @@ Este projeto tem como objetivo a automação de testes do fluxo completo de comp
 
 ## 📂 Estrutura do Projeto
 projeto-checkout-cypress/
-│
-├── cypress/
-│ ├── e2e/
-│ │ └── checkout.cy.js # Teste principal de fluxo de compra
-│ ├── support/
-│ │ ├── commands.js # Comandos customizados do Cypress
-│ │ └── utils/
-│ │ └── usuarioFaker.js # Função utilitária de geração de usuários com Faker
-│
-├── cypress.config.js # Configuração do Cypress (inclui baseUrl)
-├── package.json # Dependências e scripts do projeto
-└── README.md # Documentação do projeto (este arquivo)
+    cypress/
+        e2e/
+            checkout.cy.js # Teste principal de fluxo de compra
+            support/
+                utils/
+                usuarioFaker.js
+                commands.js
+    cypress.config.js
+    license.txt
+    package.json
+    README.md
 ---
 
 ## 🧠 Funcionalidades Testadas
@@ -48,6 +47,7 @@ projeto-checkout-cypress/
 git clone https://github.com/lucasosses/projeto-checkout-cypress.git
 cd projeto-checkout-cypress
 
+```
 ---
 
 ### 2. Instale as dependências
@@ -61,12 +61,14 @@ npx cypress run      # Para executar os testes via terminal (modo headless)
 
 ## 🧪 Exemplo de comando customizado
 
+```bash
     Cypress.Commands.add('selecionarProduto', (index) => {
         cy.get('.product-image-wrapper').eq(index).within(() => {
             cy.contains('Add to cart').click();
         });
         cy.contains('Continue Shopping').click();
     });
+```
 
 ## 📌 Observações
 
